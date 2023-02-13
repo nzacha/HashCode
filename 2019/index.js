@@ -4,14 +4,14 @@ const Image = require("./Image");
 const Slide = require("./Slide");
 
 const fileNames = [
-  "a_example.txt",
-  //   "b_lovely_landscapes.txt",
-  //   "c_memorable_moments.txt",
-  //   "d_pet_pictures.txt",
-  //   "e_shiny_selfies.txt",|
+  //"a_example.txt",
+  "b_lovely_landscapes.txt",
+  //"c_memorable_moments.txt",
+  //"d_pet_pictures.txt",
+  //"e_shiny_selfies.txt",|
 ];
 
-const debug = true;
+const debug = false;
 
 function readFile(fileName) {
   const lines = fs
@@ -42,10 +42,10 @@ function runRoutine(fileName) {
   const args = lines.shift();
 
   const [nImages] = args.split(" ");
-  if (debug) {
-    console.log("images:", nImages);
-    console.log("----------------------------");
-  }
+  // if (debug) {
+  console.log("images:", nImages);
+  console.log("----------------------------");
+  // }
 
   const Images = [];
   for (let i = 0; i < nImages; i++) {
